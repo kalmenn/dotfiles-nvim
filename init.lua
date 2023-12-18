@@ -19,4 +19,4 @@ require('lazy').setup({ { import = "plugins" } })
 require("sets")
 require("remaps")
 
-vim.notify("starting nvim 🏕️")
+vim.notify("🏕️ starting nvim")
