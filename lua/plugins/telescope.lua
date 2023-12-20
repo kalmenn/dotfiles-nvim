@@ -8,6 +8,7 @@ return {
         "nvim-treesitter/nvim-treesitter",
         "nvim-tree/nvim-web-devicons",
     },
+    lazy = false,
     keys = {
         { "<C-t>f", "<cmd>Telescope find_files<cr>", desc = "Fuzzy find files with Telescope" },
         { "<C-p>",  "<cmd>Telescope find_files<cr>", desc = "Fuzzy find files with Telescope" },
