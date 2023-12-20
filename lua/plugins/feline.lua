@@ -1,6 +1,6 @@
 return {
     'freddiehaddad/feline.nvim',
-    opts = {},
+    lazy = false,
     config = function(_, opts)
         require('feline').setup()
         -- require('feline').winbar.setup()       -- to use winbar
