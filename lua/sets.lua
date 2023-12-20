@@ -24,6 +24,9 @@ vim.opt.undodir = os.getenv("HOME") .. "/.local/state/nvim/undodir"
 vim.opt.undofile = true
 vim.opt.updatetime = 50
 
+-- close unused buffers
+vim.opt.hidden = false
+
 -- end search when exiting
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
