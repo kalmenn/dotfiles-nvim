@@ -1,5 +1,8 @@
 return {
     'freddiehaddad/feline.nvim',
+    dependencies = {
+        "lewis6991/gitsigns.nvim",
+    },
     lazy = false,
     config = function(_, opts)
         require('feline').setup()
