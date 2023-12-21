@@ -5,9 +5,10 @@ return { {
         require("catppuccin").setup({
             flavour = "mocha",
             integrations = {
-                treesitter = false,
+                treesitter = true,
             },
+            transparent_background = true,
         })
         vim.cmd.colorscheme("catppuccin")
-    end
+    end,
 } }
