@@ -25,7 +25,11 @@ vim.opt.undofile = true
 vim.opt.updatetime = 50
 
 -- close unused buffers
-vim.opt.hidden = false
+vim.opt.hidden = false -- TODO: not working
+
+-- my brain is backwards
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
 -- end search when exiting
 vim.opt.hlsearch = false
