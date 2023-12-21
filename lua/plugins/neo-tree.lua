@@ -19,7 +19,7 @@ return {
             follow_current_file = {
                 enabled = true,
             },
-            group_empty_dirs = true,
+            group_empty_dirs = false, -- Not working well
             use_libuv_file_watcher = true,
         },
         buffers = {
