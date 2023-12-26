@@ -16,12 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({ { import = "plugins" } })
 
---[[
-    To add:
-    - https://github.com/nvim-lualine/lualine.nvim
-    - https://github.com/simrat39/rust-tools.nvim
-]]--
-
 require("sets")
 require("remaps")
 
