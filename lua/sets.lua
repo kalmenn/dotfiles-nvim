@@ -33,6 +33,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 -- stuff
+vim.opt.mousemodel = "extend"
 
 vim.opt.fillchars:append({ eob = ' ' })
 
