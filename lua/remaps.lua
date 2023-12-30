@@ -15,3 +15,6 @@ vim.keymap.set("n", "<C-k>", "<cmd>bnext<CR>")
 -- exit from terminal easily
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set("t", "<C-v><Esc>", "<Esc>") -- Verbatim escape (send an esc to underlying program)
+
+-- fast open a new terminal
+vim.keymap.set("n", "<C-t>", "<cmd>vs<CR><cmd>term<CR>")
