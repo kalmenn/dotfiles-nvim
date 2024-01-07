@@ -5,6 +5,14 @@ return {
         opts = {},
     },
     {
+        "williamboman/mason-lspconfig.nvim",
+        dependencies = {
+            "williamboman/mason.nvim",
+        },
+        config = function()
+        end,
+    },
+    {
         "neovim/nvim-lspconfig",
         dependencies = {
             "hrsh7th/cmp-nvim-lsp",
@@ -38,33 +46,44 @@ return {
             })
         end,
         config = function()
-            local lspconfig = require("lspconfig")
-
             local capabilities = require("cmp_nvim_lsp").default_capabilities();
+            local lspconfig = require("lspconfig");
 
-            lspconfig.pyright.setup({
-                capabilities = capabilities,
-            })
-
-            lspconfig.lua_ls.setup({
-                capabilities = capabilities,
-                settings = {
-                    Lua = {
-                        runtime = {
-                            -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-                            version = "LuaJIT",
-                        },
-                        workspace = {
-                            -- Make the server aware of Neovim runtime files
-                            library = vim.api.nvim_get_runtime_file("", true),
-                        },
-                        -- Do not send telemetry data containing a randomized but unique identifier
-                        telemetry = {
-                            enable = false,
-                        },
-                    },
+            require("mason-lspconfig").setup({
+                handlers = {
+                    -- default handler
+                    function(server_name)
+                        lspconfig[server_name].setup {
+                            capabilities = capabilities,
+                        }
+                    end,
+                    -- overrides
+                    ["rust_analyzer"] = function()
+                        require("lazy").load { plugins = { "rust-tools.nvim" } };
+                    end,
+                    ["lua_ls"] = function()
+                        lspconfig.lua_ls.setup({
+                            capabilities = capabilities,
+                            settings = {
+                                Lua = {
+                                    runtime = {
+                                        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+                                        version = "LuaJIT",
+                                    },
+                                    workspace = {
+                                        -- Make the server aware of Neovim runtime files
+                                        library = vim.api.nvim_get_runtime_file("", true),
+                                    },
+                                    -- Do not send telemetry data containing a randomized but unique identifier
+                                    telemetry = {
+                                        enable = false,
+                                    },
+                                },
+                            },
+                        })
+                    end,
                 },
-            })
-        end
+            });
+        end,
     },
 }
