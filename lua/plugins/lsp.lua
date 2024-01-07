@@ -1,6 +1,10 @@
 return {
     { import = "plugins/languages" },
     {
+        "williamboman/mason.nvim",
+        opts = {},
+    },
+    {
         "neovim/nvim-lspconfig",
         dependencies = {
             "hrsh7th/cmp-nvim-lsp",
