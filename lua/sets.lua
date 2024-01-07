@@ -33,7 +33,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 -- spellchecking
-vim.opt.spelllang = "en_us"
+vim.opt.spelllang = { "en_us", "fr" }
 vim.opt.spell = true
 
 -- stuff
