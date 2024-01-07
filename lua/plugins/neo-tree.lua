@@ -34,7 +34,7 @@ return {
         },
         source_selector = {
             winbar = true,
-        }
+        },
     },
     keys = {
         { "<C-N>t", "<cmd>Neotree toggle<cr>",           "Toggle Neotree" },

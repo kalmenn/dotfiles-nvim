@@ -12,7 +12,7 @@ return {
         "saadparwaiz1/cmp_luasnip",
     },
     config = function()
-        local cmp = require("cmp");
+        local cmp = require("cmp")
 
         cmp.setup({
             snippet = {
@@ -36,7 +36,7 @@ return {
                 { name = "luasnip" },
             }, {
                 { name = "buffer" },
-            })
+            }),
         })
 
         vim.api.nvim_create_autocmd("BufRead", {
@@ -51,18 +51,18 @@ return {
         cmp.setup.cmdline({ "/", "?" }, {
             mapping = cmp.mapping.preset.cmdline(),
             sources = {
-                { name = "buffer" }
-            }
+                { name = "buffer" },
+            },
         })
 
         -- Use cmdline & path source for ":" (if you enabled `native_menu`, this won"t work anymore).
         cmp.setup.cmdline(":", {
             mapping = cmp.mapping.preset.cmdline(),
             sources = cmp.config.sources({
-                { name = "path" }
+                { name = "path" },
             }, {
-                { name = "cmdline" }
-            })
+                { name = "cmdline" },
+            }),
         })
     end,
 }

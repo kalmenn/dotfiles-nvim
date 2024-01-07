@@ -39,7 +39,7 @@ vim.opt.spell = true
 -- stuff
 vim.opt.mousemodel = "extend"
 
-vim.opt.fillchars:append({ eob = ' ' })
+vim.opt.fillchars:append({ eob = " " })
 
 vim.opt.termguicolors = true
 

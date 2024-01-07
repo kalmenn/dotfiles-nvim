@@ -1,7 +1,7 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     config = function()
-        require('nvim-treesitter.configs').setup({
+        require("nvim-treesitter.configs").setup({
             modules = {},
             ensure_installed = { "lua", "rust" },
             sync_install = false,
@@ -12,5 +12,5 @@ return {
             },
             ignore_install = {},
         })
-    end
+    end,
 }

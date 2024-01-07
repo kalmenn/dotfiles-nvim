@@ -4,9 +4,9 @@ return {
         {
             "<A-u>",
             function()
-                vim.cmd.UndotreeToggle();
-                vim.cmd.UndotreeFocus();
-            end
+                vim.cmd.UndotreeToggle()
+                vim.cmd.UndotreeFocus()
+            end,
         },
     },
 }

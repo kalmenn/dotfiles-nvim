@@ -13,5 +13,5 @@ return {
         { "<C-t>f", "<cmd>Telescope find_files<cr>", desc = "Fuzzy find files with Telescope" },
         { "<C-p>",  "<cmd>Telescope find_files<cr>", desc = "Fuzzy find files with Telescope" },
         { "<C-t>b", "<cmd>Telescope buffers<cr>",    desc = "Fuzzy find open buffers with Telescope" },
-    }
+    },
 }

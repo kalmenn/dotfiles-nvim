@@ -1,5 +1,5 @@
 return {
-    'freddiehaddad/feline.nvim',
+    "freddiehaddad/feline.nvim",
     dependencies = {
         "lewis6991/gitsigns.nvim",
     },
