@@ -5,7 +5,7 @@ vim.o.relativenumber = true
 
 -- show hidden characters
 vim.opt.list = true
-vim.opt.listchars = { tab = '→ ', trail = '·' }
+vim.opt.listchars = { tab = "→ ", trail = "·" }
 
 -- indentation
 vim.opt.expandtab = true
@@ -31,6 +31,10 @@ vim.opt.splitbelow = true
 -- end search when exiting
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+
+-- spellchecking
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
 
 -- stuff
 vim.opt.mousemodel = "extend"
