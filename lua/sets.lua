@@ -35,6 +35,7 @@ vim.opt.incsearch = true
 -- spellchecking
 vim.opt.spelllang = { "en_us", "fr" }
 vim.opt.spell = true
+vim.opt.spellfile = "spell/add.utf-8.add"
 
 -- stuff
 vim.opt.mousemodel = "extend"
