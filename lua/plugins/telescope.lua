@@ -17,7 +17,7 @@ return {
     opts = {
         pickers = {
             find_files = {
-                hidden = true,
+                find_command = { "rg", "--files", "--hidden", "--no-ignore-vcs", "--glob", "!**/.git/*" },
             },
         },
     },
