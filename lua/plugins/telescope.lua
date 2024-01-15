@@ -13,6 +13,7 @@ return {
         { "<C-t>f", "<cmd>Telescope find_files<cr>", desc = "Fuzzy find files with Telescope" },
         { "<C-p>",  "<cmd>Telescope find_files<cr>", desc = "Fuzzy find files with Telescope" },
         { "<C-t>b", "<cmd>Telescope buffers<cr>",    desc = "Fuzzy find open buffers with Telescope" },
+        { "<C-t>s", "<cmd>Telescope lsp_document_symbols<cr>",    desc = "Fuzzy find lsp symbols in current document with Telescope" },
     },
     opts = {
         pickers = {
