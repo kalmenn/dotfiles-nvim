@@ -35,7 +35,7 @@ vim.opt.incsearch = true
 -- spellchecking
 vim.opt.spelllang = { "en_us", "fr" }
 vim.opt.spell = true
-vim.opt.spellfile = "spell/add.utf-8.add"
+vim.opt.spellfile = vim.fn.stdpath("config") .. "/spell/add.utf-8.add"
 
 -- exrc
 vim.opt.exrc = true
