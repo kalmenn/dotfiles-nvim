@@ -45,7 +45,6 @@ return {
             sources = {
                 { source = "filesystem" },
                 { source = "buffers" },
-                { source = "git_status" },
                 { source = "diagnostics"},
             },
         },
