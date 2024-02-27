@@ -6,9 +6,16 @@ return {
         "nvim-tree/nvim-web-devicons",
         "MunifTanjim/nui.nvim",
         -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+        "mrbjarksen/neo-tree-diagnostics.nvim",
     },
     lazy = false,
     opts = {
+        sources = {
+            "filesystem",
+            "buffers",
+            "git_status",
+            "diagnostics",
+        },
         filesystem = {
             filtered_items = {
                 visible = true,
@@ -31,9 +38,16 @@ return {
         window = {
             position = "right",
             width = 30,
+            auto_expand_width = true,
         },
         source_selector = {
             winbar = true,
+            sources = {
+                { source = "filesystem" },
+                { source = "buffers" },
+                { source = "git_status" },
+                { source = "diagnostics"},
+            },
         },
     },
     keys = {
@@ -41,5 +55,6 @@ return {
         { "<C-N>f", "<cmd>Neotree filesystem focus<cr>", "Focus filesystem in Neotree" },
         { "<C-N>b", "<cmd>Neotree buffers focus<cr>",    "Focus buffers in Neotree" },
         { "<C-N>g", "<cmd>Neotree git_status focus<cr>", "Focus git status in Neotree" },
+        { "<C-N>b", "<cmd>Neotree diagnostics focus<cr>", "Focus diagnostics in Neotree" },
     },
 }
