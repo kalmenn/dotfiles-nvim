@@ -15,6 +15,12 @@ end
 return {
     { import = "plugins/languages" },
     {
+        "folke/neodev.nvim",
+        opts = {
+            lspconfig = false,
+        },
+    },
+    {
         "williamboman/mason.nvim",
         opts = {},
     },
@@ -80,6 +86,7 @@ return {
                     end,
                     ["lua_ls"] = function()
                         lspconfig.lua_ls.setup({
+                            before_init = require("neodev.lsp").before_init,
                             capabilities = capabilities,
                             settings = {
                                 Lua = {
