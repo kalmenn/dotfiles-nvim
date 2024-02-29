@@ -50,10 +50,11 @@ return {
         },
     },
     keys = {
-        { "<C-N>t", "<cmd>Neotree toggle<cr>",           "Toggle Neotree" },
-        { "<C-N>f", "<cmd>Neotree filesystem focus<cr>", "Focus filesystem in Neotree" },
-        { "<C-N>b", "<cmd>Neotree buffers focus<cr>",    "Focus buffers in Neotree" },
-        { "<C-N>g", "<cmd>Neotree git_status focus<cr>", "Focus git status in Neotree" },
+        { "<C-N>c", "<cmd>Neotree close<cr>",             "Close Neotree" },
+        { "<C-N>t", "<cmd>Neotree toggle<cr>",            "Toggle Neotree" },
+        { "<C-N>f", "<cmd>Neotree filesystem focus<cr>",  "Focus filesystem in Neotree" },
+        { "<C-N>b", "<cmd>Neotree buffers focus<cr>",     "Focus buffers in Neotree" },
+        { "<C-N>g", "<cmd>Neotree git_status focus<cr>",  "Focus git status in Neotree" },
         { "<C-N>d", "<cmd>Neotree diagnostics focus<cr>", "Focus diagnostics in Neotree" },
     },
 }
