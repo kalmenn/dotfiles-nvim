@@ -1,3 +1,17 @@
+--- Automatically set the filetype for all buffers matching a pattern.
+--- Uses an autocommand under the hood
+--- @param pattern string|string[] What buffers to match on.
+--- @see vim.api.nvim_create_autocmd
+--- @param filetype string The filetype to set for the matching buffers
+local function bind_filetype(pattern, filetype)
+    vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+        pattern = pattern,
+        callback = function()
+            vim.bo.filetype = filetype
+        end,
+    })
+end
+
 return {
     { import = "plugins/languages" },
     {
@@ -49,6 +63,8 @@ return {
         config = function()
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
             local lspconfig = require("lspconfig")
+
+            bind_filetype("*.wgsl", "wgsl")
 
             require("mason-lspconfig").setup({
                 handlers = {
