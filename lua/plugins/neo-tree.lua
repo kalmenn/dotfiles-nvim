@@ -45,7 +45,7 @@ return {
             sources = {
                 { source = "filesystem" },
                 { source = "buffers" },
-                { source = "diagnostics"},
+                { source = "diagnostics" },
             },
         },
     },
