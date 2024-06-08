@@ -20,5 +20,6 @@ require("lazy").setup({ { import = "plugins" } })
 
 require("sets")
 require("remaps")
+require("filetypes")
 
 vim.notify("starting nvim 🏕️")
