@@ -5,7 +5,7 @@ vim.o.relativenumber = true
 
 -- show hidden characters
 vim.opt.list = true
-vim.opt.listchars = { tab = "→ ", trail = "·" }
+vim.opt.listchars = { tab = "→ ", trail = "•" }
 
 -- indentation
 vim.opt.expandtab = true
